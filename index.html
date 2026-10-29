@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Dale al Rec: guiones fáciles de radio escolar</title>
+<title>Dale al Rec</title>
 <style>
 :root{--c:#1d6b4f;--bg:#f6f4ee;--t:#222}
 *{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--t);margin:0;line-height:1.5}
@@ -18,11 +18,12 @@ th{background:#e7efe9}
 .blk{background:#fff;border:1px solid #ccc;border-radius:8px;padding:.8rem;margin:.6rem 0}
 .blk h3{margin:.1rem 0}.mus{color:#6a4a00;font-style:italic}
 .hueco{background:#fff3b0;padding:0 .2rem;border-radius:3px}
+.opc{font-weight:400;color:#666;font-size:.85rem}
 .small{font-size:.85rem;color:#555}.hidden{display:none}
 pre{white-space:pre-wrap}
 @media print{header,fieldset,.noprint{display:none}body{background:#fff}.blk{border:0;border-bottom:1px solid #ccc;border-radius:0}}
 </style></head><body>
-<header><h1>Dale al Rec: guiones fáciles de radio escolar</h1><p>Elige curso, temática y duración. Sin registro, sin IA, sin coste.</p></header>
+<header><h1>Dale al Rec</h1><p>Guiones de radio escolar: elige curso, temática y duración. Sin registro, sin IA, sin coste.</p></header>
 <main>
 <fieldset><legend>1. Curso</legend>
 <label><input type="radio" name="et" value="infantil"> Infantil</label>
@@ -37,19 +38,20 @@ pre{white-space:pre-wrap}
 <fieldset><legend>3. Duración</legend>
 <select id="dur"><option value="5">5 minutos</option><option value="10" selected>10 minutos</option><option value="15">15 minutos</option><option value="20">20 minutos</option></select>
 </fieldset>
-<fieldset><legend>4. Datos del programa</legend>
-<div class="row"><label>Nombre del centro<input type="text" id="cole" placeholder="Ej.: CEIP Mi Cole"></label>
-<label>Locutor/a 1<input type="text" id="loc1" placeholder="Nombre"></label>
-<label>Locutor/a 2<input type="text" id="loc2" placeholder="Nombre"></label></div>
-<p class="small">Los nombres que escribas solo se usan en tu navegador y no se guardan ni se envían.</p>
+<fieldset><legend>4. Locutores</legend>
+<div class="row">
+<label>¿Cuántos locutores? (hasta 6)<select id="nloc"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label></div>
+<div class="row" id="locs"></div>
+<p class="small">Los nombres son opcionales: si los dejas en blanco, el guion dirá «Locutor 1», «Locutor 2»... Todo se queda en tu navegador: no se guarda ni se envía.</p>
 </fieldset>
 <button id="gen">Crear guion</button>
 <div id="out" class="hidden">
 <h2 id="tit"></h2>
+<div id="ideas"></div>
 <h3>Escaleta</h3>
 <table><thead><tr><th>Sección</th><th>Min.</th><th>Música</th></tr></thead><tbody id="esc"></tbody></table>
 <p id="tot" class="small"></p>
-<h3>Guion</h3><div id="guion"></div>
+<h3>Guion de ejemplo</h3><p class="small">Es una propuesta: podéis seguirlo tal cual, cambiarlo o inventar el vuestro.</p><div id="guion"></div>
 <div class="noprint"><button id="cp" class="sec">Copiar guion</button><button id="pr" class="sec">Imprimir</button></div>
 </div>
 <div id="libre" class="hidden">
@@ -72,12 +74,35 @@ const ol=document.createElement("option");ol.value="libre";ol.textContent="Temá
 const et=()=>document.querySelector('input[name=et]:checked').value;
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 let ultimo="";
-function rel(t){
- const v={cole:$("cole").value.trim(),loc1:$("loc1").value.trim(),loc2:$("loc2").value.trim()};
- const k=s=>s.replace(/\{(cole|loc1|loc2)\}/g,(m,a)=>v[a]||m);
- return k(t);
+let turno=0;
+function nombres(){const n=+$("nloc").value,a=[];for(let i=0;i<n;i++){const el=document.getElementById("loc"+i);a.push((el&&el.value.trim())||("Locutor "+(i+1)))}return a}
+function renderLocs(){const n=+$("nloc").value;const prev=[...document.querySelectorAll("#locs input")].map(i=>i.value);$("locs").innerHTML="";for(let i=0;i<n;i++){const l=document.createElement("label");l.innerHTML="Locutor/a "+(i+1)+' <span class="opc">(opcional)</span><input type="text" id="loc'+i+'" placeholder="Nombre (opcional)">';$("locs").appendChild(l);l.querySelector("input").value=prev[i]||""}}
+function rel(t){const N=nombres();const c="[tu centro]";
+ return t.split("\n").map(l=>{const m=l.match(/^\{loc[12]\}:/);if(!m)return l.replace(/\{cole\}/g,c);const nm=N[turno%N.length];turno++;return (nm+":"+l.slice(m[0].length)).replace(/\{cole\}/g,c)}).join("\n")}
+function html(r){return esc(r).replace(/___|\[tu centro\]/g,m=>'<span class="hueco">'+m+'</span>').replace(/\n/g,"<br>")}
+function limpio(t){return t.split("\n").map(l=>l.replace(/^\{loc[12]\}:\s*/,"").replace(/\{cole\}/g,"vuestro centro")).join(" ")}
+function ideas(tema,e,ids,N){
+ const S=tema.secciones,L=[];
+ const G={
+ sintonia_entrada:"Elegid una sintonía propia y corta (10 o 15 segundos) que se repita en cada programa: da identidad.",
+ saludo:"Inventad un nombre y un lema para vuestro programa y empezad siempre igual.",
+ efemeride:"Explicad por qué se celebra «"+tema.nombre+"» ("+tema.fecha+"). Idea: que un alumno lo investigue en casa y lo cuente con sus palabras.",
+ noticia_cole:"Recoged una noticia real del centro (una salida, un concurso, un logro). Podéis pedirlas a otras clases con una cajita de sugerencias.",
+ curiosidades:"Cada locutor busca una curiosidad sobre el tema y la cuenta en 20 segundos.",
+ adivinanza:"Lanzad la adivinanza hoy y dad la solución en el próximo programa: crea expectación. También podéis pedir adivinanzas a otras clases.",
+ entrevista:"Invitad a alguien (un maestro, el conserje, un familiar, un compañero) y preparad las preguntas antes.",
+ recomendacion:"Cada semana una clase recomienda un libro, una canción o un juego.",
+ mensaje:"Cerrad con una idea que quede: un valor, un reto o un compromiso para la semana.",
+ despedida:"Despedíos siempre igual y avisad de qué hablaréis en el próximo programa."};
+ ids.forEach(k=>{const s=S[k][e];let x="<b>"+NOM[k]+":</b> "+G[k];
+  if(k==="curiosidades"){const ls=s.texto.split("\n").map(limpio).filter(z=>z.length>25);if(ls.length)x+=" Semillas: "+ls.slice(0,3).map(z=>"«"+esc(z)+"»").join(" ")}
+  if(k==="entrevista"&&s.preguntas)x+=" Preguntas posibles: "+s.preguntas.map(esc).join(" · ");
+  L.push("<li>"+x+"</li>")});
+ const roles=N>=3?"Con "+N+" locutores, repartíos las intervenciones por turnos.":(N===2?"Con dos locutores, alternad las frases.":"Con un solo locutor, leed con pausas y cambiad el tono entre secciones.");
+ L.push("<li><b>Reparto:</b> "+roles+" Si hay más gente, añadid un técnico o técnica de sonido (música), un redactor o redactora (noticias) y un entrevistador o entrevistadora.</li>");
+ L.push("<li><b>Antes de grabar:</b> ensayad una vez, leed despacio y poned el micrófono a un palmo de la boca.</li>");
+ return '<div class="blk"><h3>Ideas para tu programa</h3><p class="small">Una lluvia de ideas para organizaros. El guion de abajo es solo un ejemplo.</p><ul>'+L.join("")+"</ul></div>";
 }
-function html(t){return esc(rel(t)).replace(/___|\{(cole|loc1|loc2)\}/g,m=>'<span class="hueco">'+m+'</span>').replace(/\n/g,"<br>")}
 function elegir(tema,e,dur){
  const sec=tema.secciones;const disp=ORD.filter(k=>sec[k][e]);
  let ids=disp.filter(k=>sec[k].obligatoria);let tot=ids.reduce((a,k)=>a+sec[k].minutos,0);
@@ -85,22 +110,24 @@ function elegir(tema,e,dur){
  return {ids:ORD.filter(k=>ids.includes(k)),tot};
 }
 function gen(){
+ const N=nombres();
  if(sel.value==="libre"){$("out").classList.add("hidden");$("libre").classList.remove("hidden");
-  $("prompt").textContent="Eres un guionista de radio escolar. Escribe un guion de "+$("dur").value+" minutos para alumnado de "+et()+" sobre el tema: [ESCRIBE AQUÍ EL TEMA].\nLocutores: "+($("loc1").value||"[Locutor 1]")+" y "+($("loc2").value||"[Locutor 2]")+". Centro: "+($("cole").value||"[nombre del centro]")+".\nEstructura: sintonía de entrada, saludo, efeméride o contexto, curiosidades, adivinanza, entrevista de tres preguntas, recomendación, mensaje final y despedida.\nUsa frases cortas y vocabulario adaptado a la edad, tono cercano y respetuoso, sin datos personales. Indica con [MÚSICA: idea] dónde poner música. Si no estás seguro de un dato, dilo en vez de inventarlo.";
+  $("prompt").textContent="Eres un guionista de radio escolar. Escribe un guion de "+$("dur").value+" minutos para alumnado de "+et()+" sobre el tema: [ESCRIBE AQUÍ EL TEMA].\nLocutores ("+N.length+"): "+N.join(", ")+". Centro: [nombre del centro].\nEstructura: sintonía de entrada, saludo, efeméride o contexto, curiosidades, adivinanza, entrevista de tres preguntas, recomendación, mensaje final y despedida.\nUsa frases cortas y vocabulario adaptado a la edad, tono cercano y respetuoso, sin datos personales. Indica con [MÚSICA: idea] dónde poner música. Si no estás seguro de un dato, dilo en vez de inventarlo.";
   return}
  $("libre").classList.add("hidden");
  const tema=TEMAS.find(t=>t.id===sel.value),e=et(),dur=+$("dur").value;
- const r=elegir(tema,e,dur);
+ const r=elegir(tema,e,dur);turno=0;
  $("tit").textContent=tema.nombre+" · "+e[0].toUpperCase()+e.slice(1)+" · "+dur+" min";
+ $("ideas").innerHTML=ideas(tema,e,r.ids,N.length);
  $("esc").innerHTML=r.ids.map(k=>{const s=tema.secciones[k][e];return "<tr><td>"+NOM[k]+"</td><td>"+tema.secciones[k].minutos+"</td><td>"+esc(s.musica||"—")+"</td></tr>"}).join("");
  $("tot").textContent="Duración estimada: "+r.tot+" minutos (objetivo: "+dur+").";
- let g="",tx="TEMA: "+tema.nombre+"\n\n";
- r.ids.forEach(k=>{const s=tema.secciones[k][e];let body=s.texto;
-  let extra="";if(s.preguntas){extra="<ol>"+s.preguntas.map(p=>"<li>"+esc(p)+"</li>").join("")+"</ol>"}
-  g+='<div class="blk"><h3>'+NOM[k]+" ("+tema.secciones[k].minutos+" min)</h3>"+(s.musica?'<p class="mus">Música: '+esc(s.musica)+"</p>":"")+"<p>"+html(body)+"</p>"+extra+"</div>";
-  tx+="== "+NOM[k].toUpperCase()+" ==\n"+(s.musica?"[Música: "+s.musica+"]\n":"")+rel(body)+"\n"+(s.preguntas?s.preguntas.map((p,i)=>(i+1)+". "+p).join("\n")+"\n":"")+"\n"});
+ let g="",tx="TEMA: "+tema.nombre+" (guion de ejemplo)\n\n";
+ r.ids.forEach(k=>{const s=tema.secciones[k][e];const txt=rel(s.texto);
+  const extra=s.preguntas?"<ol>"+s.preguntas.map(p=>"<li>"+esc(p)+"</li>").join("")+"</ol>":"";
+  g+='<div class="blk"><h3>'+NOM[k]+" ("+tema.secciones[k].minutos+" min)</h3>"+(s.musica?'<p class="mus">Música: '+esc(s.musica)+"</p>":"")+"<p>"+html(txt)+"</p>"+extra+"</div>";
+  tx+="== "+NOM[k].toUpperCase()+" ==\n"+(s.musica?"[Música: "+s.musica+"]\n":"")+txt+"\n"+(s.preguntas?s.preguntas.map((p,i)=>(i+1)+". "+p).join("\n")+"\n":"")+"\n"});
  $("guion").innerHTML=g;ultimo=tx;$("out").classList.remove("hidden");$("out").scrollIntoView({behavior:"smooth"});
 }
 async function cp(txt,btn){try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement("textarea");a.value=txt;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove()}const o=btn.textContent;btn.textContent="¡Copiado!";setTimeout(()=>btn.textContent=o,1500)}
-$("gen").onclick=gen;$("cp").onclick=()=>cp(ultimo,$("cp"));$("cpp").onclick=()=>cp($("prompt").textContent,$("cpp"));$("pr").onclick=()=>window.print();
+$("nloc").onchange=renderLocs;renderLocs();$("gen").onclick=gen;$("cp").onclick=()=>cp(ultimo,$("cp"));$("cpp").onclick=()=>cp($("prompt").textContent,$("cpp"));$("pr").onclick=()=>window.print();
 </script></body></html>
