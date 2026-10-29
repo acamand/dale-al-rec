@@ -1,0 +1,179 @@
+{
+  "id": "dia-andalucia",
+  "nombre": "Día de Andalucía",
+  "fecha": "28 de febrero",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música alegre con palmas.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Sintonía alegre con guitarra o palmas.",
+        "texto": "[Música de entrada, sube y baja el volumen]"
+      },
+      "eso": {
+        "musica": "Base instrumental con aire andaluz, tipo guitarra.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Instrumental sobrio con guitarra.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Hoy es el Día de Andalucía! ¡Vamos a celebrarlo!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: ¡Hoy es un día muy especial, porque celebramos Andalucía!"
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días a todo el instituto {cole}. Esto es Radio {cole}.\n{loc2}: Hoy, 28 de febrero, hablamos de Andalucía."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Comenzamos Radio {cole}.\n{loc2}: Hoy hablamos de Andalucía: de dónde venimos y hacia dónde queremos ir."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: Andalucía es nuestra tierra.\n{loc2}: Hoy hacemos fiesta para quererla mucho.\n{loc1}: Su bandera es verde y blanca. ¡Qué bonita!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¿Sabéis por qué celebramos hoy el Día de Andalucía?\n{loc2}: Porque el 28 de febrero de 1980 los andaluces votaron para decidir cómo querían gobernar su tierra.\n{loc1}: Desde entonces recordamos ese día con la bandera verde y blanca y con nuestro himno."
+      },
+      "eso": {
+        "texto": "{loc1}: El 28 de febrero de 1980 se celebró el referéndum que permitió a Andalucía acceder a la autonomía por la vía rápida.\n{loc2}: Ese resultado marcó el camino hacia el Estatuto de Autonomía, aprobado en 1981.\n{loc1}: Hoy no es solo un día sin clase: es recordar cómo se decidió nuestro autogobierno."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El 28 de febrero de 1980 Andalucía votó en referéndum su acceso a la autonomía por la vía del artículo 151 de la Constitución.\n{loc2}: Fue un momento clave porque equiparó a Andalucía con las llamadas comunidades históricas.\n{loc1}: Cuatro décadas después, ¿qué ha cambiado y qué falta por cambiar?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Ahora, las noticias de nuestro cole: ___ (escribid aquí una noticia real del centro)."
+      },
+      "eso": {
+        "texto": "{loc2}: Actualidad del centro: ___ (una noticia real del instituto)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Del centro: ___ (una noticia real del instituto)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: En Andalucía hace mucho sol.\n{loc1}: Tenemos playas, montañas y un desierto.\n{loc2}: ¡Y comemos pan con aceite de oliva!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades andaluzas.\n{loc2}: Primera: Andalucía tiene ocho provincias. ¿Sabríais nombrarlas?\n{loc1}: Segunda: la letra del himno la escribió Blas Infante.\n{loc2}: Tercera: el Mulhacén, en Sierra Nevada, es la montaña más alta de la península."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos para sorprender.\n{loc2}: La bandera blanca y verde fue propuesta por Blas Infante, también autor de la letra del himno.\n{loc1}: La música del himno es del maestro José del Castillo.\n{loc2}: Y Andalucía es la comunidad autónoma con más habitantes de España."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto cultural.\n{loc2}: Blas Infante, considerado padre de la patria andaluza, escribió la letra del himno.\n{loc1}: La Alhambra, la Mezquita de Córdoba y Doñana forman parte del patrimonio reconocido por la UNESCO.\n{loc2}: Andalucía fue durante siglos cruce de culturas: fenicia, romana, andalusí y cristiana."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: es verde y blanca, ondea en el cole y en el balcón. ¿Qué es?\n{loc2}: ¡La bandera de Andalucía!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivina, adivinanza: ___ (adivinanza andaluza).\n{loc2}: Pensadlo un momento... ¡y mañana os damos la respuesta!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto del día: ___ (pregunta de cultura andaluza). Responded en el tablón o en clase."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ___ (tema andaluz de actualidad)."
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Cuál es tu comida andaluza favorita?",
+          "¿Qué es lo que más te gusta de vivir en Andalucía?",
+          "¿Qué lugar de Andalucía te gustaría enseñar a un amigo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. ¡Le haremos tres preguntas!"
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué significa para ti ser andaluz o andaluza?",
+          "¿Qué tradición andaluza crees que hay que conservar?",
+          "¿Qué cambiarías o mejorarías de tu tierra?"
+        ],
+        "texto": "{loc1}: Nos acompaña ___. Le pedimos tres opiniones sinceras."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Cómo definirías la identidad andaluza hoy?",
+          "¿Qué retos tiene Andalucía para los jóvenes?",
+          "¿Piensas quedarte o salir a estudiar o trabajar fuera?"
+        ],
+        "texto": "{loc1}: Con nosotros ___. Tres preguntas sin prisa."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Fragmento de música andaluza infantil.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, canción o juego andaluz)."
+      },
+      "eso": {
+        "musica": "Algo de flamenco actual o música andaluza.",
+        "texto": "{loc2}: Esta semana os recomendamos ___ (canción, serie o libro con sabor andaluz)."
+      },
+      "bachillerato": {
+        "musica": "Música o poesía andaluza.",
+        "texto": "{loc2}: Os recomendamos leer o escuchar ___ (autor o artista andaluz)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "primaria": {
+        "texto": "{loc1}: Andalucía es de todos: de quienes nacieron aquí y de quienes llegaron después.\n{loc2}: Cuidar y respetar nuestra tierra es tarea de todos."
+      },
+      "eso": {
+        "texto": "{loc1}: Sentirse orgulloso de la tierra no excluye a nadie.\n{loc2}: Andalucía siempre ha sido mezcla de culturas, y esa es parte de su riqueza."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Querer a tu tierra es también exigirle y mejorarla.\n{loc2}: Que la identidad una, no que separe."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía, más suave.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Viva Andalucía!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Y hasta aquí el programa de hoy.\n{loc2}: ¡Gracias por escucharnos! ¡Feliz Día de Andalucía!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Feliz Día de Andalucía."
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Esto ha sido Radio {cole}.\n{loc2}: Feliz Día de Andalucía."
+      }
+    }
+  }
+}

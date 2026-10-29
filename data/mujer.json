@@ -1,0 +1,182 @@
+{
+  "id": "mujer",
+  "nombre": "Día de la Mujer",
+  "fecha": "8 de marzo",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: Hoy es el Día de la Mujer. ¡Niñas y niños somos iguales!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy celebramos el Día Internacional de la Mujer, el 8 de marzo."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy es 8 de marzo, Día Internacional de la Mujer."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: 8 de marzo: hablamos de igualdad, de historia y de lo que falta por hacer."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: Niñas y niños podemos hacer lo mismo.\n{loc2}: Podemos ser médicos, bomberos, maestros y científicos.\n{loc1}: ¡Todos somos iguales!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El 8 de marzo celebramos el Día Internacional de la Mujer.\n{loc2}: Recordamos que las mujeres y los hombres tienen los mismos derechos.\n{loc1}: Y homenajeamos a mujeres que hicieron cosas importantes."
+      },
+      "eso": {
+        "texto": "{loc1}: El 8 de marzo conmemora la lucha de las mujeres por la igualdad de derechos.\n{loc2}: Naciones Unidas lo reconoce como Día Internacional de la Mujer.\n{loc1}: Hoy recordamos lo conseguido y lo que queda por hacer."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El 8 de marzo reivindica la igualdad real entre mujeres y hombres.\n{loc2}: Su origen está en las luchas obreras y sufragistas del siglo XX.\n{loc1}: La igualdad legal avanza, pero la real sigue en construcción."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el mural o las actividades por la igualdad)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el mural o las actividades por la igualdad)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el mural o las actividades por la igualdad)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: Hubo una científica muy lista que se llamaba Marie Curie.\n{loc1}: Descubrió cosas muy importantes.\n{loc2}: ¡Y ganó dos premios Nobel!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres mujeres importantes.\n{loc2}: Marie Curie, científica, ganó dos premios Nobel.\n{loc1}: Mariana Pineda, de Granada, defendió la libertad.\n{loc2}: María Zambrano, de Málaga, fue una gran filósofa."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Marie Curie ganó el Nobel de Física en 1903 y el de Química en 1911.\n{loc1}: Las españolas votaron por primera vez en 1933.\n{loc2}: Victoria Kent, malagueña, fue de las primeras abogadas de España."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: El sufragio femenino llegó a España en 1933, tras el debate parlamentario en el que destacaron Clara Campoamor y Victoria Kent.\n{loc1}: María Zambrano es una de las grandes filósofas en español.\n{loc2}: La brecha salarial y el techo de cristal siguen siendo realidad."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: sé cuidar, enseñar y curar, y también puedo ser presidenta. ¿Quién soy?\n{loc2}: ¡Una mujer, que puede ser lo que quiera!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre una mujer famosa).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿quién fue esta mujer? dato histórico)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿qué logro de una mujer te parece más infravalorado?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué quieres ser de mayor?",
+          "¿Qué mujer te ha enseñado cosas importantes?",
+          "¿Crees que niñas y niños pueden jugar a lo mismo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué mujer de tu familia admiras y por qué?",
+          "¿Qué te parece que haya profesiones solo para hombres o mujeres?",
+          "¿Qué le dirías a una niña que quiere ser científica?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Notas desigualdades entre chicos y chicas en tu día a día?",
+          "¿Qué referente femenino te ha inspirado?",
+          "¿Qué se puede hacer desde el instituto por la igualdad?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, película o serie con una protagonista inspiradora)."
+      },
+      "eso": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, película o serie con una protagonista inspiradora)."
+      },
+      "bachillerato": {
+        "musica": "Música enérgica y optimista.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, película o serie con una protagonista inspiradora)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Todos tenemos los mismos derechos.\n{loc2}: Niñas y niños podemos soñar lo mismo."
+      },
+      "primaria": {
+        "texto": "{loc1}: Igualdad es que nadie decida por ti por ser niña o niño.\n{loc2}: Y que todos podamos ser lo que queramos."
+      },
+      "eso": {
+        "texto": "{loc1}: La igualdad es cosa de todos, no solo de las mujeres.\n{loc2}: Empieza por el respeto cotidiano."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Sin igualdad real no hay justicia.\n{loc2}: Implica a hombres y mujeres por igual."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Feliz 8 de marzo!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz 8 de marzo!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz 8 de marzo!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz 8 de marzo!"
+      }
+    }
+  }
+}

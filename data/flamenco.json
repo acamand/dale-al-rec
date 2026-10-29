@@ -1,0 +1,182 @@
+{
+  "id": "flamenco",
+  "nombre": "Flamenco y Letras Andaluzas",
+  "fecha": "16 de noviembre",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Hoy hablamos de flamenco!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy hablamos del flamenco, nuestro arte."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos del flamenco y de las letras andaluzas."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos del flamenco: arte, voz y poesía."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: El flamenco es música de Andalucía.\n{loc2}: Se canta, se baila y se toca la guitarra.\n{loc1}: ¡Y se dan palmas!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El 16 de noviembre es el Día Internacional del Flamenco.\n{loc2}: En 2010 la UNESCO lo declaró Patrimonio Cultural Inmaterial de la Humanidad.\n{loc1}: Es un arte nacido en Andalucía."
+      },
+      "eso": {
+        "texto": "{loc1}: El flamenco es cante, baile y toque.\n{loc2}: La UNESCO lo reconoció como Patrimonio Inmaterial de la Humanidad el 16 de noviembre de 2010.\n{loc1}: Sus letras son poesía popular."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El flamenco nace de la mezcla de culturas del sur.\n{loc2}: Es música, danza y poesía a la vez.\n{loc1}: Sus letras hablan de amor, dolor y vida."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actuación o el taller de flamenco)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actuación o el taller de flamenco)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actuación o el taller de flamenco)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: Para bailar flamenco se dan palmas.\n{loc1}: Y se taconea con los pies.\n{loc2}: ¡Es muy divertido!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: Camarón de la Isla es uno de los mayores cantaores.\n{loc1}: Paco de Lucía, de Algeciras, fue un genial guitarrista.\n{loc2}: Hay estilos o palos como la soleá, la bulería o los fandangos."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Los estilos del flamenco se llaman palos: soleá, bulería, alegrías, fandangos...\n{loc1}: Paco de Lucía llevó el flamenco al mundo.\n{loc2}: El cajón flamenco llegó de Perú gracias a Paco de Lucía."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Lorca y otros poetas se inspiraron en el cante jondo.\n{loc1}: Camarón renovó el cante sin perder raíz.\n{loc2}: El flamenco actual dialoga con el jazz y el pop."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: tengo seis cuerdas y suena a flamenco. ¿Qué soy?\n{loc2}: ¡La guitarra!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza de música).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿qué palo flamenco es este?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿qué debe conservar el flamenco para seguir siendo flamenco?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Has bailado alguna vez flamenco?",
+          "¿Qué instrumento te gusta?",
+          "¿Cantas alguna copla?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué palo flamenco te gusta más?",
+          "¿Conoces a algún artista flamenco?",
+          "¿Te gustaría aprender a bailar?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Qué te transmite el flamenco?",
+          "¿Debe el flamenco mezclarse con otros estilos?",
+          "¿Qué letra o poema te ha tocado?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "{loc2}: Os recomendamos ___ (canción flamenca o poema andaluz)."
+      },
+      "eso": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "{loc2}: Os recomendamos ___ (canción flamenca o poema andaluz)."
+      },
+      "bachillerato": {
+        "musica": "Guitarra flamenca o palmas.",
+        "texto": "{loc2}: Os recomendamos ___ (canción flamenca o poema andaluz)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: El flamenco es de todos.\n{loc2}: ¡Escuchadlo y disfrutadlo!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El flamenco es un tesoro de Andalucía.\n{loc2}: Y cualquiera puede aprender a apreciarlo."
+      },
+      "eso": {
+        "texto": "{loc1}: El flamenco es identidad y emoción.\n{loc2}: Para entenderlo hay que escucharlo."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El flamenco es patrimonio vivo.\n{loc2}: Se mantiene cuando lo escuchamos y lo transmitimos."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Olé!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Olé!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Olé!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Olé!"
+      }
+    }
+  }
+}

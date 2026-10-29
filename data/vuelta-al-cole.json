@@ -1,0 +1,182 @@
+{
+  "id": "vuelta-al-cole",
+  "nombre": "Vuelta al cole",
+  "fecha": "septiembre",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Volvemos al cole!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: ¡Bienvenidos de nuevo al cole!"
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: ¡Bienvenidos de nuevo, {cole}!"
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Empieza un nuevo curso."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: ¡Volvemos al cole!\n{loc2}: Vemos a los amigos y conocemos a los profes.\n{loc1}: ¡Qué ilusión!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Después del verano volvemos a clase.\n{loc2}: Hay compañeros nuevos, nuevos libros y nuevos retos.\n{loc1}: ¡Vamos a hacer un gran curso!"
+      },
+      "eso": {
+        "texto": "{loc1}: Empieza el curso con ganas y también con nervios.\n{loc2}: Hay caras nuevas, horarios nuevos y metas nuevas.\n{loc1}: Es un buen momento para plantearse objetivos."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Un nuevo curso es una oportunidad.\n{loc2}: Para organizarse mejor, para empezar de cero.\n{loc1}: ¿Qué quieres conseguir este año?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la acogida de alumnado nuevo)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la acogida de alumnado nuevo)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la acogida de alumnado nuevo)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: En el cole hay mochila, libros y colores.\n{loc1}: ¡Y muchos amigos!\n{loc2}: ¡Cuidad todo mucho!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: En España los cursos empiezan en septiembre.\n{loc1}: Una mochila no debe pesar más del diez por ciento de tu peso.\n{loc2}: Dormir bien ayuda a aprender mejor."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Dormir entre 9 y 11 horas es lo recomendado a estas edades.\n{loc1}: Estudiar con descansos rinde más.\n{loc2}: La mochila no debe superar el 10 % de tu peso."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Rutinas de sueño y descanso mejoran la concentración.\n{loc1}: Planificar semanas ayuda más que estudiar la víspera.\n{loc2}: Pedir ayuda a tiempo es de personas inteligentes."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: tengo cremallera, llevo libros y voy a tu espalda. ¿Qué soy?\n{loc2}: ¡La mochila!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza del cole).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (pregunta sobre el cole)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿qué esperas de este curso?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué te hace más ilusión del cole?",
+          "¿A quién has echado de menos?",
+          "¿Qué quieres aprender este año?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué te gusta más de volver?",
+          "¿Qué propósito tienes este curso?",
+          "¿Qué consejo darías a alguien nuevo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Cómo afrontas el inicio de curso?",
+          "¿Qué cambiarías de tu forma de estudiar?",
+          "¿Qué meta tienes este año?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "{loc2}: Os recomendamos ___ (canción o libro para empezar el curso)."
+      },
+      "eso": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "{loc2}: Os recomendamos ___ (canción o libro para empezar el curso)."
+      },
+      "bachillerato": {
+        "musica": "Música alegre y enérgica.",
+        "texto": "{loc2}: Os recomendamos ___ (canción o libro para empezar el curso)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Un curso nuevo es una hoja en blanco.\n{loc2}: ¡Vamos a escribirla bien!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Ayudarnos y respetarnos hace un curso mejor.\n{loc2}: ¡A por él!"
+      },
+      "eso": {
+        "texto": "{loc1}: El curso empieza con lo que decidas hacer hoy.\n{loc2}: Y se construye día a día."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Cada curso es un paso hacia lo que quieres ser.\n{loc2}: Hazlo con constancia."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Buen curso!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Buen curso!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Buen curso!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Buen curso!"
+      }
+    }
+  }
+}

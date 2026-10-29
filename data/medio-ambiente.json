@@ -1,0 +1,182 @@
+{
+  "id": "medio-ambiente",
+  "nombre": "Medio ambiente",
+  "fecha": "5 de junio",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Vamos a cuidar nuestro planeta!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy hablamos del Día Mundial del Medio Ambiente."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy, 5 de junio, hablamos del medio ambiente."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: 5 de junio: ¿qué hacemos con el planeta?"
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: La Tierra es nuestra casa.\n{loc2}: Tenemos que cuidarla mucho.\n{loc1}: No tirar basura al suelo y cerrar el grifo."
+      },
+      "primaria": {
+        "texto": "{loc1}: El 5 de junio es el Día Mundial del Medio Ambiente.\n{loc2}: Lo estableció Naciones Unidas en 1972.\n{loc1}: Es un día para cuidar la naturaleza."
+      },
+      "eso": {
+        "texto": "{loc1}: El Día Mundial del Medio Ambiente se celebra cada 5 de junio, desde 1973.\n{loc2}: Lo promueve Naciones Unidas.\n{loc1}: Cada año tiene un lema distinto."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El Día Mundial del Medio Ambiente se celebra cada 5 de junio y lo promueve la ONU.\n{loc2}: El cambio climático, la contaminación y la pérdida de biodiversidad son hoy sus grandes temas.\n{loc1}: ¿Qué podemos hacer desde nuestro día a día?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el huerto escolar o el reciclaje del centro)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el huerto escolar o el reciclaje del centro)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el huerto escolar o el reciclaje del centro)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: En Andalucía hay un bosque con ciervos y linces.\n{loc1}: ¡Y aves que vienen de muy lejos!\n{loc2}: Es un parque muy bonito."
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: Doñana, en Andalucía, es Parque Nacional y Patrimonio de la Humanidad.\n{loc1}: El contenedor amarillo es para plástico y latas.\n{loc2}: El azul, para papel y cartón."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: El lince ibérico, que vive en Sierra Morena, estuvo en peligro de extinción y se ha recuperado en parte.\n{loc1}: Doñana alberga miles de aves migratorias.\n{loc2}: Cada español genera cientos de kilos de basura al año."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Doñana sufre presión por el uso del agua y el cambio climático.\n{loc1}: El lince ibérico demuestra que la conservación puede funcionar.\n{loc2}: La mejor basura es la que no se genera."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: soy un contenedor amarillo, me das plástico y latas. ¿Qué soy?\n{loc2}: ¡El contenedor del reciclaje!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre reciclaje o naturaleza).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿a qué contenedor va esto?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿el reciclaje basta o hace falta consumir menos?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué haces tú para cuidar la naturaleza?",
+          "¿Qué animal te gustaría proteger?",
+          "¿Reciclas en casa?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué podemos hacer en el cole por el planeta?",
+          "¿Qué hábito de tu familia cuida el medio ambiente?",
+          "¿Qué animal andaluz proteges?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Qué problema ambiental te preocupa más?",
+          "¿Qué cambio de hábito harías mañana?",
+          "¿Crees que los jóvenes cambiamos más que los mayores?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "{loc2}: Os recomendamos ___ (documental, libro o canción sobre la naturaleza)."
+      },
+      "eso": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "{loc2}: Os recomendamos ___ (documental, libro o canción sobre la naturaleza)."
+      },
+      "bachillerato": {
+        "musica": "Música suave con sonidos de naturaleza.",
+        "texto": "{loc2}: Os recomendamos ___ (documental, libro o canción sobre la naturaleza)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Cuidar el planeta es cuidar nuestra casa.\n{loc2}: Reciclar, ahorrar agua y no tirar basura."
+      },
+      "primaria": {
+        "texto": "{loc1}: Las tres erres: reducir, reutilizar y reciclar.\n{loc2}: ¡Todos podemos hacerlas!"
+      },
+      "eso": {
+        "texto": "{loc1}: Cada gesto cuenta, pero los grandes cambios se deciden entre todos.\n{loc2}: Exigir y actuar a la vez."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: No hay planeta B.\n{loc2}: Actuar es una responsabilidad compartida."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Cuida el planeta!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Cuida el planeta!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Cuida el planeta!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Cuida el planeta!"
+      }
+    }
+  }
+}

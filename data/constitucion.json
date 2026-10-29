@@ -1,0 +1,182 @@
+{
+  "id": "constitucion",
+  "nombre": "Día de la Constitución",
+  "fecha": "6 de diciembre",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: Hoy es el Día de la Constitución. ¡Tenemos derechos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy celebramos el Día de la Constitución, el 6 de diciembre."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy, 6 de diciembre, hablamos de la Constitución."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: 6 de diciembre: derechos, deberes y convivencia."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: La Constitución es un libro de reglas importantes.\n{loc2}: Dice que todos somos iguales.\n{loc1}: ¡Y que los niños tenemos derechos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El 6 de diciembre es el Día de la Constitución.\n{loc2}: En 1978 los españoles votaron en referéndum la Constitución.\n{loc1}: Es la ley más importante de España."
+      },
+      "eso": {
+        "texto": "{loc1}: El 6 de diciembre de 1978 los españoles aprobaron la Constitución en referéndum.\n{loc2}: Ese texto organiza el país y garantiza derechos y libertades.\n{loc1}: Hoy recordamos qué dice y por qué importa."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La Constitución de 1978 marcó la transición a la democracia.\n{loc2}: Reconoce derechos, libertades y el Estado de las autonomías.\n{loc1}: Conocerla es ejercer ciudadanía."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad sobre la Constitución en el centro)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad sobre la Constitución en el centro)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad sobre la Constitución en el centro)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: La Constitución dice que todos tenemos derecho a ir al cole.\n{loc1}: ¡Y a jugar!\n{loc2}: ¡Y a ser tratados con respeto!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: La Constitución tiene 169 artículos.\n{loc1}: Dice que todos los españoles somos iguales ante la ley.\n{loc2}: El derecho a la educación está en el artículo 27."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: La Constitución española tiene 169 artículos.\n{loc1}: El artículo 14 proclama la igualdad.\n{loc2}: El 27 reconoce el derecho a la educación."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Fue fruto de un pacto político tras la dictadura.\n{loc1}: Reconoce libertades como la de expresión y la de reunión.\n{loc2}: Los derechos se mantienen cuando se ejercen y se defienden."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: soy una ley, la más importante de España. ¿Quién soy?\n{loc2}: ¡La Constitución!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre derechos).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿qué artículo dice esto?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿qué derecho te parece más importante?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué derecho te parece más importante?",
+          "¿Qué es para ti ser igual?",
+          "¿Qué norma de casa es importante?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué derecho de los niños te parece más importante?",
+          "¿Qué es un deber?",
+          "¿Qué cambiarías en el cole para que sea más justo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Conoces tus derechos y deberes?",
+          "¿Qué artículo te parece más importante?",
+          "¿Cómo se ejerce la ciudadanía a tu edad?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "{loc2}: Os recomendamos ___ (libro o canción sobre derechos y convivencia)."
+      },
+      "eso": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "{loc2}: Os recomendamos ___ (libro o canción sobre derechos y convivencia)."
+      },
+      "bachillerato": {
+        "musica": "Música solemne pero cercana.",
+        "texto": "{loc2}: Os recomendamos ___ (libro o canción sobre derechos y convivencia)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Tener derechos también es tener deberes.\n{loc2}: Y respetar los de los demás."
+      },
+      "primaria": {
+        "texto": "{loc1}: Las normas nos protegen a todos.\n{loc2}: ¡Y es bueno conocerlas!"
+      },
+      "eso": {
+        "texto": "{loc1}: Los derechos se ejercen, no solo se tienen.\n{loc2}: Con responsabilidad."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La democracia se construye con ciudadanos informados.\n{loc2}: Conocer la Constitución es un primer paso."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Feliz Día de la Constitución!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día de la Constitución!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día de la Constitución!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día de la Constitución!"
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "id": "libro",
+  "nombre": "Día del Libro",
+  "fecha": "23 de abril",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: Hoy es el Día del Libro. ¡Vamos a leer!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy celebramos el Día del Libro, el 23 de abril."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy es 23 de abril, Día del Libro."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: 23 de abril: hablamos de leer, de escribir y de quienes lo hacen."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: Los libros tienen dibujos, palabras y cuentos.\n{loc2}: Con un libro viajamos sin movernos.\n{loc1}: ¡Leer es divertido!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El 23 de abril es el Día del Libro.\n{loc2}: Ese día murieron en 1616 los escritores Cervantes y Shakespeare.\n{loc1}: Celebramos la lectura regalando libros y leyendo en voz alta."
+      },
+      "eso": {
+        "texto": "{loc1}: El 23 de abril se celebra el Día Mundial del Libro y de los Derechos de Autor, proclamado por la UNESCO en 1995.\n{loc2}: Se eligió porque en 1616 murieron Cervantes y Shakespeare.\n{loc1}: En España lo celebramos con libros, rosas y lecturas."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El Día del Libro conmemora la muerte de Cervantes, Shakespeare y el Inca Garcilaso en 1616.\n{loc2}: En Cataluña se regalan rosas y libros por Sant Jordi.\n{loc1}: Hoy preguntamos: ¿qué lugar ocupa la lectura entre jóvenes?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el intercambio de libros o el concurso de lectura)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el intercambio de libros o el concurso de lectura)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el intercambio de libros o el concurso de lectura)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: Un burrito muy bueno se llama Platero.\n{loc1}: Un poeta andaluz escribió un libro sobre él.\n{loc2}: ¡Platero y yo!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: Juan Ramón Jiménez, de Moguer, escribió Platero y yo y ganó el Nobel de Literatura.\n{loc1}: Don Quijote es un caballero que lee tantos libros que se vuelve loco.\n{loc2}: Lorca nació en Fuente Vaqueros, en Granada."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Don Quijote es una de las obras más traducidas de la historia.\n{loc1}: Juan Ramón Jiménez, Nobel en 1956, es de Moguer.\n{loc2}: Bécquer, de Sevilla, escribió leyendas y rimas."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Andalucía ha dado a la literatura a Bécquer, Machado, Lorca, Alberti y Juan Ramón Jiménez, entre otros.\n{loc1}: La Generación del 27 fue una de las épocas poéticas más brillantes en español.\n{loc2}: Leer sigue siendo una forma de pensar por uno mismo."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: tengo hojas pero no soy árbol, tengo lomo pero no soy animal. ¿Qué soy?\n{loc2}: ¡Un libro!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre un libro o personaje).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿de qué libro es esta frase o personaje?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿se lee menos o se lee diferente?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Cuál es tu cuento favorito?",
+          "¿Qué personaje te gustaría conocer?",
+          "¿Dónde te gusta leer?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Cuál es el último libro que has leído?",
+          "¿Qué personaje de libro se parece a ti?",
+          "¿Qué libro regalarías a un amigo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Prefieres papel o pantalla para leer?",
+          "¿Qué libro te ha cambiado la forma de ver algo?",
+          "¿Qué le dirías a quien dice que no le gusta leer?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "{loc2}: Os recomendamos ___ (el libro recomendado de la semana)."
+      },
+      "eso": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "{loc2}: Os recomendamos ___ (el libro recomendado de la semana)."
+      },
+      "bachillerato": {
+        "musica": "Música tranquila de piano o guitarra clásica.",
+        "texto": "{loc2}: Os recomendamos ___ (el libro recomendado de la semana)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Leer nos hace crecer.\n{loc2}: ¡Vamos a leer un poquito cada día!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Leer te da imaginación, palabras nuevas y ratos de calma.\n{loc2}: ¡Un libro es el mejor compañero de viaje!"
+      },
+      "eso": {
+        "texto": "{loc1}: Quien lee piensa mejor y expresa mejor lo que siente.\n{loc2}: No hace falta leer mucho: hace falta empezar."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Leer es una forma de libertad.\n{loc2}: Cuanto más lees, menos fácil es manipularte."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Feliz Día del Libro!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día del Libro!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día del Libro!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Día del Libro!"
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "id": "costumbres-andaluzas",
+  "nombre": "Costumbres andaluzas",
+  "fecha": "todo el año",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Vamos a hablar de las fiestas de Andalucía!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy hablamos de costumbres y fiestas de Andalucía."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy repasamos las costumbres que hacen única a Andalucía."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos de tradiciones andaluzas: qué son y por qué las mantenemos."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: En Andalucía hay muchas fiestas.\n{loc2}: Hay ferias con trajes de flamenca y música.\n{loc1}: ¡Y se baila y se canta mucho!"
+      },
+      "primaria": {
+        "texto": "{loc1}: En Andalucía celebramos la Semana Santa, las ferias y las romerías.\n{loc2}: En primavera hay patios con flores y en verano, fiestas en los pueblos.\n{loc1}: Cada pueblo tiene sus propias costumbres."
+      },
+      "eso": {
+        "texto": "{loc1}: Las costumbres andaluzas mezclan raíces religiosas, populares y culturales.\n{loc2}: Se viven en calles, patios, ermitas y plazas.\n{loc1}: Muchas se transmiten de generación en generación."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Las tradiciones son memoria colectiva.\n{loc2}: En Andalucía mezclan fe, fiesta y vida en la calle.\n{loc1}: Hoy nos preguntamos cuáles hay que conservar y cuáles pueden cambiar."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la feria o la fiesta del centro)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la feria o la fiesta del centro)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la feria o la fiesta del centro)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: Un traje de volantes se llama traje de flamenca.\n{loc1}: ¡Muchas niñas y mujeres lo llevan en la feria!\n{loc2}: ¡Y se bailan sevillanas!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: La Feria de Abril de Sevilla empezó en 1847 como feria de ganado.\n{loc1}: Los patios de Córdoba son Patrimonio de la Humanidad de la UNESCO.\n{loc2}: En la romería del Rocío van miles de personas andando."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Los patios de Córdoba fueron declarados Patrimonio Cultural Inmaterial por la UNESCO en 2012.\n{loc1}: El gazpacho nació en Andalucía y se toma frío en verano.\n{loc2}: Cada provincia tiene sus fiestas, platos y dulces."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: La Feria de Abril nació en 1847 como feria de ganado y hoy es una fiesta social.\n{loc1}: Los patios cordobeses y el flamenco son patrimonio inmaterial de la UNESCO.\n{loc2}: Conservar tradiciones no significa renunciar a cambiar."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: llevo volantes, voy a la feria y bailo sevillanas. ¿Qué soy?\n{loc2}: ¡El traje de flamenca!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre fiestas andaluzas).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿qué fiesta andaluza es esta?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿qué tradición pondrías en riesgo de desaparecer?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Cuál es tu fiesta favorita?",
+          "¿Qué comida típica te gusta más?",
+          "¿Sabes bailar sevillanas?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué tradición de tu pueblo te gusta más?",
+          "¿Qué se come en tu casa en las fiestas?",
+          "¿Qué le enseñarías a un visitante?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Qué tradición andaluza sientes como tuya?",
+          "¿Cuál crees que cambió más en los últimos años?",
+          "¿Qué tradición nueva te gustaría crear?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "{loc2}: Os recomendamos ___ (música, plato o fiesta andaluza para descubrir)."
+      },
+      "eso": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "{loc2}: Os recomendamos ___ (música, plato o fiesta andaluza para descubrir)."
+      },
+      "bachillerato": {
+        "musica": "Música andaluza alegre: sevillanas o rumbas.",
+        "texto": "{loc2}: Os recomendamos ___ (música, plato o fiesta andaluza para descubrir)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Las tradiciones nos unen.\n{loc2}: ¡Y se disfrutan más compartidas!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Conocer nuestras costumbres es conocernos.\n{loc2}: Y respetar las de los demás."
+      },
+      "eso": {
+        "texto": "{loc1}: Las tradiciones se mantienen cuando se viven.\n{loc2}: Y se enriquecen con quienes llegan."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La tradición no es museo: es algo vivo.\n{loc2}: Depende de cómo la sigamos celebrando."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Viva Andalucía!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Viva Andalucía!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Viva Andalucía!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Viva Andalucía!"
+      }
+    }
+  }
+}

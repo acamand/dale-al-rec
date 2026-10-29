@@ -1,0 +1,179 @@
+{
+  "id": "navidad",
+  "nombre": "Navidad",
+  "fecha": "diciembre",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Campanillas y música navideña suave.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Villancico instrumental alegre.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Versión instrumental moderna de un villancico.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Instrumental navideño sobrio.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, {cole}!\n{loc2}: ¡Ya es Navidad! ¡Qué ilusión!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis en Radio {cole}.\n{loc2}: ¡Hoy es un programa especial de Navidad!"
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Último programa antes de las vacaciones de Navidad."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Comienza Radio {cole}.\n{loc2}: Hoy hablamos de la Navidad, tradición y consumo."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: En Navidad decoramos el árbol y el belén.\n{loc2}: Estamos con la familia y cantamos villancicos.\n{loc1}: ¡Y esperamos a los Reyes Magos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: La Navidad es una fiesta en la que se celebra el nacimiento de Jesús, y para muchas familias es sobre todo un tiempo para estar juntos.\n{loc2}: Empieza con la Nochebuena, el 24 de diciembre, y termina con los Reyes Magos, el 6 de enero.\n{loc1}: Hay belenes, árboles, villancicos y cenas en familia."
+      },
+      "eso": {
+        "texto": "{loc1}: La Navidad mezcla tradición religiosa, costumbres populares y vacaciones familiares.\n{loc2}: Va de Nochebuena a Reyes, con fechas como Nochevieja y las uvas.\n{loc1}: Cada región tiene sus platos y sus rituales."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La Navidad actual combina raíces religiosas, tradiciones populares y una gran dimensión comercial.\n{loc2}: Es también una época de contrastes: celebración para muchos y soledad para otros.\n{loc1}: Merece la pena preguntarse qué tradiciones queremos conservar."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del cole: ___ (festival, concurso de belenes o felicitaciones)."
+      },
+      "eso": {
+        "texto": "{loc2}: Del centro: ___ (una noticia real)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Del centro: ___ (una noticia real)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: En Andalucía se comen mantecados y polvorones.\n{loc1}: Y se cantan villancicos con zambomba.\n{loc2}: ¡Rum, rum, rum!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: En Andalucía se cantan villancicos con zambomba, sobre todo en Jerez.\n{loc1}: Los mantecados de Estepa son muy famosos.\n{loc2}: La Lotería de Navidad se celebra el 22 de diciembre y la cantan niños de San Ildefonso."
+      },
+      "eso": {
+        "texto": "{loc1}: Curiosidades.\n{loc2}: La zambomba flamenca es una tradición muy viva en Jerez.\n{loc1}: Los mantecados de Estepa tienen Indicación Geográfica Protegida.\n{loc2}: Las doce uvas de Nochevieja son una costumbre española."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Muchas costumbres navideñas, como el árbol, llegaron de Europa del norte en los últimos siglos.\n{loc1}: La zambomba jerezana y el villancico flamenco son patrimonio cultural vivo de Andalucía.\n{loc2}: El Sorteo de Navidad existe desde el siglo XIX."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: tres reyes vienen de lejos con regalos. ¿Quiénes son?\n{loc2}: ¡Melchor, Gaspar y Baltasar!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza navideña).\n{loc2}: ¡Os damos la respuesta en el próximo programa!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (pregunta navideña)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ___ (tradición o consumo)."
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué es lo que más te gusta de la Navidad?",
+          "¿Qué comida no puede faltar en tu casa?",
+          "¿Qué le pedirías a los Reyes Magos para otra persona?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. ¡Tres preguntas navideñas!"
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué tradición familiar no cambiarías?",
+          "¿Qué te parece el consumismo de estas fechas?",
+          "¿Qué propósito tienes para el año nuevo?"
+        ],
+        "texto": "{loc1}: Con nosotros ___. Tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Qué significa la Navidad para ti hoy?",
+          "¿Qué cambiarías en cómo se vive?",
+          "¿Qué costumbre te gustaría recuperar?"
+        ],
+        "texto": "{loc1}: Nos acompaña ___. Tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Villancico tradicional.",
+        "texto": "{loc2}: Os recomendamos un villancico, un cuento o una peli de Navidad: ___."
+      },
+      "eso": {
+        "musica": "Tema navideño actual o clásico.",
+        "texto": "{loc2}: Os recomendamos ___ (película o libro para estas vacaciones)."
+      },
+      "bachillerato": {
+        "musica": "Música o cine clásico de Navidad.",
+        "texto": "{loc2}: Os recomendamos ___ (película, libro o álbum)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "primaria": {
+        "texto": "{loc1}: La Navidad es compartir, no solo recibir regalos.\n{loc2}: Acordaos de quienes están solos o lo pasan peor."
+      },
+      "eso": {
+        "texto": "{loc1}: Estas fechas son para cuidar a los tuyos.\n{loc2}: Y para pensar en quienes lo pasan peor."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Dar tiempo es el mejor regalo.\n{loc2}: Que estas fiestas nos hagan más cercanos."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Feliz Navidad a todos!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Hasta aquí el programa.\n{loc2}: ¡Feliz Navidad y próspero año nuevo!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Esto ha sido Radio {cole}.\n{loc2}: Felices fiestas."
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Felices fiestas."
+      }
+    }
+  }
+}

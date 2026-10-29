@@ -1,0 +1,182 @@
+{
+  "id": "paz",
+  "nombre": "Día de la Paz",
+  "fecha": "30 de enero",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: Hoy es el Día de la Paz. ¡Queremos un mundo de amigos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: Hoy celebramos el Día Escolar de la No Violencia y la Paz."
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy celebramos el Día Escolar de la No Violencia y la Paz."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos de paz, convivencia y cómo construirlas cada día."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: La paz es llevarnos bien.\n{loc2}: Es compartir, jugar sin pegar y pedir perdón.\n{loc1}: ¡Y dar abrazos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Cada 30 de enero, los colegios celebramos el Día Escolar de la No Violencia y la Paz.\n{loc2}: Lo propuso en 1964 el poeta y maestro mallorquín Llorenç Vidal.\n{loc1}: Se celebra ese día porque es el aniversario de la muerte de Gandhi, que defendió la paz sin violencia."
+      },
+      "eso": {
+        "texto": "{loc1}: El Día Escolar de la No Violencia y la Paz nació en 1964, a propuesta del maestro Llorenç Vidal.\n{loc2}: Se eligió el 30 de enero, aniversario de la muerte de Gandhi en 1948.\n{loc1}: Hoy se celebra en muchos países, sobre todo en los centros educativos."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El 30 de enero conmemora la muerte de Gandhi, referente de la resistencia no violenta.\n{loc2}: La iniciativa, nacida en un colegio mallorquín en 1964, es hoy una jornada educativa internacional.\n{loc1}: La pregunta de hoy: ¿es la paz solo ausencia de guerra?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad del centro por la paz)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad del centro por la paz)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, la actividad del centro por la paz)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: La paloma es el símbolo de la paz.\n{loc1}: Una paloma blanca lleva una ramita de olivo.\n{loc2}: ¡Y la ramita de olivo también es de Andalucía!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: La paloma con el olivo es símbolo de paz desde hace siglos.\n{loc1}: Gandhi logró cambiar leyes sin usar la violencia.\n{loc2}: Malala, una niña, ganó el Premio Nobel de la Paz con 17 años."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Malala Yousafzai, premio Nobel de la Paz en 2014, es la persona más joven en recibirlo.\n{loc1}: Martin Luther King también defendió la no violencia.\n{loc2}: La ONU declara cada 21 de septiembre el Día Internacional de la Paz."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: La no violencia activa de Gandhi y de Martin Luther King cambió leyes y sociedades.\n{loc1}: La Declaración Universal de Derechos Humanos es de 1948.\n{loc2}: Educar para la paz es hoy una línea del currículo escolar."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: soy blanca, vuelo y llevo una ramita de olivo. ¿Qué soy?\n{loc2}: ¡La paloma de la paz!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza sobre paz o amistad).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (pregunta sobre paz o derechos humanos)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿se puede construir la paz sin justicia?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿Qué haces tú cuando alguien se pelea?",
+          "¿Cómo se arregla un enfado entre amigos?",
+          "¿Qué es para ti la paz?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué puede hacer un alumno para mejorar la convivencia?",
+          "¿Cómo se resuelve un conflicto sin violencia?",
+          "¿Qué persona de paz admiras?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Es posible la no violencia ante una injusticia grave?",
+          "¿Cómo afecta el acoso a un grupo?",
+          "¿Qué compromiso personal harías por la paz?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, canción o película sobre la paz)."
+      },
+      "eso": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, canción o película sobre la paz)."
+      },
+      "bachillerato": {
+        "musica": "Música suave y esperanzadora, con piano o guitarra.",
+        "texto": "{loc2}: Os recomendamos ___ (libro, canción o película sobre la paz)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: La paz empieza en lo pequeño: un saludo, una disculpa, un abrazo.\n{loc2}: ¡Podemos construirla cada día!"
+      },
+      "primaria": {
+        "texto": "{loc1}: La paz no es solo que no haya peleas.\n{loc2}: Es respetar, escuchar y ayudar."
+      },
+      "eso": {
+        "texto": "{loc1}: La paz se construye en el patio, en el aula y en las redes.\n{loc2}: Cada gesto cuenta."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La paz exige empatía, diálogo y compromiso.\n{loc2}: Y empieza por cómo nos tratamos."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Que la paz esté con vosotros!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Que la paz esté con vosotros!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Que la paz esté con vosotros!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Que la paz esté con vosotros!"
+      }
+    }
+  }
+}

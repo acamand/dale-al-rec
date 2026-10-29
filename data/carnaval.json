@@ -1,0 +1,182 @@
+{
+  "id": "carnaval",
+  "nombre": "Carnaval",
+  "fecha": "febrero",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, amigos y amigas de {cole}!\n{loc2}: ¡Es Carnaval! ¡Vamos a disfrazarnos!"
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis escuchando Radio {cole}.\n{loc2}: ¡Llega el Carnaval!"
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos del Carnaval, una fiesta con mucha tradición."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos del Carnaval: humor, crítica y fiesta."
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: En Carnaval nos disfrazamos.\n{loc2}: Hay máscaras, música y mucha risa.\n{loc1}: ¡Qué divertido!"
+      },
+      "primaria": {
+        "texto": "{loc1}: El Carnaval es una fiesta de disfraces que se celebra antes de la Cuaresma.\n{loc2}: Hay desfiles, música y concursos.\n{loc1}: En Andalucía, el de Cádiz es el más famoso."
+      },
+      "eso": {
+        "texto": "{loc1}: El Carnaval se celebra en febrero, antes de la Cuaresma.\n{loc2}: Es una fiesta de disfraces, música y humor.\n{loc1}: En Cádiz tiene una tradición muy especial."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: El Carnaval es la fiesta de la sátira: se permite reírse del poder.\n{loc2}: En Cádiz es una tradición con siglos de historia.\n{loc1}: ¿Hasta dónde llega el humor?"
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el desfile o el concurso de disfraces)."
+      },
+      "eso": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el desfile o el concurso de disfraces)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Noticias del centro: ___ (por ejemplo, el desfile o el concurso de disfraces)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: En Cádiz hay grupos que cantan en Carnaval.\n{loc1}: Se llaman chirigotas.\n{loc2}: ¡Cantan cosas muy graciosas!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: En el Carnaval de Cádiz hay chirigotas, comparsas, coros y cuartetos.\n{loc1}: Los concursos se hacen en el Gran Teatro Falla.\n{loc2}: Las letras hacen crítica con humor."
+      },
+      "eso": {
+        "texto": "{loc1}: Datos.\n{loc2}: Las chirigotas cantan con humor, las comparsas con tono más serio.\n{loc1}: Los coros se acompañan de guitarras y bandurrias.\n{loc2}: El carnaval gaditano usa el humor para criticar la actualidad."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: Durante la dictadura, el Carnaval de Cádiz llegó a prohibirse.\n{loc1}: Las agrupaciones son un ejemplo de poesía popular.\n{loc2}: Reírse es también una forma de pensar."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: me pongo para ser otro, tapo mi cara y me divierto. ¿Qué soy?\n{loc2}: ¡Un disfraz!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza de disfraces).\n{loc2}: ¡La respuesta, mañana!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (¿qué tipo de agrupación es?)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ¿tiene límites el humor?"
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿De qué te vas a disfrazar?",
+          "¿Qué disfraz te hizo más gracia?",
+          "¿Qué copla del Carnaval te sabes?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "eso": {
+        "preguntas": [
+          "¿Qué disfraz de este año te ha gustado más?",
+          "¿Te gusta cantar chirigotas?",
+          "¿Cómo celebras el Carnaval en tu pueblo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Debe tener límites el humor?",
+          "¿Qué te gusta de las coplas gaditanas?",
+          "¿Por qué crees que el Carnaval sigue vivo?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. Le haremos tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "{loc2}: Os recomendamos ___ (copla, chirigota o disfraz para descubrir)."
+      },
+      "eso": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "{loc2}: Os recomendamos ___ (copla, chirigota o disfraz para descubrir)."
+      },
+      "bachillerato": {
+        "musica": "Música de comparsa o chirigota.",
+        "texto": "{loc2}: Os recomendamos ___ (copla, chirigota o disfraz para descubrir)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Disfrazarse es divertido.\n{loc2}: Pero siempre con respeto a los demás."
+      },
+      "primaria": {
+        "texto": "{loc1}: En Carnaval nos reímos, pero sin herir a nadie.\n{loc2}: ¡A disfrutar!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reírse con alguien no es reírse de alguien.\n{loc2}: Esa es la diferencia."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: La sátira buena hace pensar.\n{loc2}: Y respeta a las personas."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Feliz Carnaval!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Carnaval!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Carnaval!"
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada, más suave.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Gracias por escucharnos. ¡Feliz Carnaval!"
+      }
+    }
+  }
+}

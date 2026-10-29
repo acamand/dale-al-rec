@@ -1,0 +1,179 @@
+{
+  "id": "halloween",
+  "nombre": "Halloween",
+  "fecha": "31 de octubre",
+  "variables": [
+    "{cole}",
+    "{loc1}",
+    "{loc2}"
+  ],
+  "secciones": {
+    "sintonia_entrada": {
+      "minutos": 0.5,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Música misteriosa pero divertida.",
+        "texto": "[Música de entrada]"
+      },
+      "primaria": {
+        "musica": "Sintonía de misterio con risas.",
+        "texto": "[Música de entrada]"
+      },
+      "eso": {
+        "musica": "Instrumental inquietante, tipo banda sonora.",
+        "texto": "[Música de entrada]"
+      },
+      "bachillerato": {
+        "musica": "Instrumental oscuro, minimalista.",
+        "texto": "[Música de entrada]"
+      }
+    },
+    "saludo": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "texto": "{loc1}: ¡Hola, {cole}!\n{loc2}: ¡Hoy es Halloween! ¡Buuu! Pero no os asustéis."
+      },
+      "primaria": {
+        "texto": "{loc1}: ¡Buenos días, {cole}! Estáis en Radio {cole}.\n{loc2}: Hoy es una mañana de brujas, fantasmas y calabazas: ¡es Halloween!"
+      },
+      "eso": {
+        "texto": "{loc1}: Buenos días, {cole}. Esto es Radio {cole}.\n{loc2}: Hoy hablamos de una fiesta con mucha historia: Halloween."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Buenos días, {cole}. Comienza Radio {cole}.\n{loc2}: Halloween: ¿fiesta comercial, tradición o ambas cosas?"
+      }
+    },
+    "efemeride": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc1}: En Halloween nos disfrazamos.\n{loc2}: Hay brujas, fantasmas y calabazas con cara.\n{loc1}: Es una fiesta para divertirnos."
+      },
+      "primaria": {
+        "texto": "{loc1}: Halloween se celebra el 31 de octubre, la noche antes del Día de Todos los Santos.\n{loc2}: Viene de una fiesta celta, antiquísima, que se llevó a Estados Unidos y desde allí se hizo famosa en medio mundo.\n{loc1}: En España, el 1 de noviembre recordamos a quienes ya no están, con flores y dulces típicos."
+      },
+      "eso": {
+        "texto": "{loc1}: Halloween viene de Samhain, fiesta celta que marcaba el final de la cosecha.\n{loc2}: La tradición cruzó el Atlántico con la emigración irlandesa y volvió a Europa muy transformada.\n{loc1}: En España convive con el Día de Todos los Santos y el Tenorio."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Halloween procede del festival celta de Samhain y de la víspera de Todos los Santos cristiana.\n{loc2}: Su expansión mundial es un ejemplo de cómo se globaliza una tradición con ayuda del cine y el comercio.\n{loc1}: Aquí convive con fiestas propias como Todos los Santos y el Tenorio."
+      }
+    },
+    "noticia_cole": {
+      "minutos": 1.5,
+      "primaria": {
+        "texto": "{loc2}: Noticias de nuestro cole: ___ (por ejemplo, el concurso de disfraces)."
+      },
+      "eso": {
+        "texto": "{loc2}: Del centro: ___ (una noticia real)."
+      },
+      "bachillerato": {
+        "texto": "{loc2}: Del centro: ___ (una noticia real)."
+      }
+    },
+    "curiosidades": {
+      "minutos": 2,
+      "infantil": {
+        "texto": "{loc2}: Las calabazas se vacían y se ponen velitas.\n{loc1}: Los niños dicen: ¡truco o trato!\n{loc2}: Y reciben caramelos."
+      },
+      "primaria": {
+        "texto": "{loc1}: Tres curiosidades.\n{loc2}: Las primeras calabazas de Halloween eran nabos en Irlanda.\n{loc1}: «Truco o trato» significa que se pide un caramelo o se hace una broma.\n{loc2}: En Andalucía, en estos días se comen buñuelos y huesos de santo."
+      },
+      "eso": {
+        "texto": "{loc1}: Curiosidades.\n{loc2}: Antes de las calabazas se tallaban nabos.\n{loc1}: «Trick or treat» se popularizó en Estados Unidos en el siglo XX.\n{loc2}: En México el Día de Muertos es una celebración propia, distinta de Halloween."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Contexto.\n{loc2}: En Irlanda se tallaban nabos; la calabaza llegó con la emigración a América.\n{loc1}: El miedo ha sido siempre un género narrativo: de los cuentos orales a Poe y Stoker.\n{loc2}: Cada cultura tiene su forma de recordar a los difuntos."
+      }
+    },
+    "adivinanza": {
+      "minutos": 1,
+      "infantil": {
+        "texto": "{loc1}: Adivinanza: soy naranja, redonda y con cara de miedo. ¿Qué soy?\n{loc2}: ¡Una calabaza!"
+      },
+      "primaria": {
+        "texto": "{loc1}: Adivinanza: ___ (adivinanza de miedo suave).\n{loc2}: ¡Pensadlo y mañana os damos la respuesta!"
+      },
+      "eso": {
+        "texto": "{loc1}: Reto: ___ (pregunta de cultura sobre Halloween)."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Pregunta para debatir: ___ (¿tradición importada o propia?)."
+      }
+    },
+    "entrevista": {
+      "minutos": 3,
+      "primaria": {
+        "preguntas": [
+          "¿De qué te vas a disfrazar?",
+          "¿Cuál es el disfraz más divertido que has visto?",
+          "¿Prefieres miedo o risa en Halloween?"
+        ],
+        "texto": "{loc1}: Hoy nos acompaña ___. ¡Tres preguntas de miedo!"
+      },
+      "eso": {
+        "preguntas": [
+          "¿Halloween te parece tradición importada o fiesta que ya es nuestra?",
+          "¿Qué película de miedo recomendarías?",
+          "¿Qué tradición española de estos días conoces?"
+        ],
+        "texto": "{loc1}: Nos acompaña ___. Tres preguntas sin filtro."
+      },
+      "bachillerato": {
+        "preguntas": [
+          "¿Qué piensas de que las fiestas se globalicen?",
+          "¿Por qué nos atrae el miedo en la ficción?",
+          "¿Qué tradición local crees que se está perdiendo?"
+        ],
+        "texto": "{loc1}: Con nosotros ___. Tres preguntas."
+      }
+    },
+    "recomendacion": {
+      "minutos": 1.5,
+      "primaria": {
+        "musica": "Canción divertida de Halloween.",
+        "texto": "{loc2}: Os recomendamos un cuento o película suave de Halloween: ___."
+      },
+      "eso": {
+        "musica": "Tema de película de terror clásica.",
+        "texto": "{loc2}: Os recomendamos ___ (libro o película de suspense)."
+      },
+      "bachillerato": {
+        "musica": "Banda sonora de terror clásico.",
+        "texto": "{loc2}: Os recomendamos leer o ver ___ (relato o película de terror)."
+      }
+    },
+    "mensaje": {
+      "minutos": 1,
+      "primaria": {
+        "texto": "{loc1}: Divertirse es genial, pero respetando a los demás.\n{loc2}: Y nada de bromas que den miedo de verdad a otros."
+      },
+      "eso": {
+        "texto": "{loc1}: Disfrazarse es un juego, no una excusa para burlarse de nadie.\n{loc2}: Y conocer el origen de las fiestas nos hace disfrutarlas más."
+      },
+      "bachillerato": {
+        "texto": "{loc1}: Conocer el origen de una fiesta es la mejor forma de disfrutarla con criterio.\n{loc2}: Y respetar a quien no quiera celebrarla."
+      }
+    },
+    "despedida": {
+      "minutos": 1,
+      "obligatoria": true,
+      "infantil": {
+        "musica": "Misma sintonía.",
+        "texto": "{loc1}: ¡Se acabó el programa!\n{loc2}: ¡Adiós, adiós! ¡Feliz Halloween!"
+      },
+      "primaria": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Hasta aquí el programa.\n{loc2}: ¡Feliz Halloween y no os asustéis demasiado!"
+      },
+      "eso": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Esto ha sido Radio {cole}.\n{loc2}: Feliz Halloween."
+      },
+      "bachillerato": {
+        "musica": "Sintonía de entrada.",
+        "texto": "{loc1}: Hasta aquí Radio {cole}.\n{loc2}: Feliz Halloween."
+      }
+    }
+  }
+}
