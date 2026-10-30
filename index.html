@@ -2,7 +2,7 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Dale al Rec</title>
 <style>
-:root{--c:#1d6b4f;--bg:#f6f4ee;--t:#222}
+:root{--c:#7467c9;--bg:#fff7ee;--t:#2f2b4a}
 *{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;background:var(--bg);color:var(--t);margin:0;line-height:1.5}
 header{background:var(--c);color:#fff;padding:1rem}header h1{margin:0;font-size:1.4rem}header p{margin:.2rem 0 0;opacity:.9}
 main{max-width:860px;margin:0 auto;padding:1rem}
@@ -22,23 +22,53 @@ th{background:#e7efe9}
 .small{font-size:.85rem;color:#555}.hidden{display:none}
 pre{white-space:pre-wrap}
 @media print{header,fieldset,.noprint{display:none}body{background:#fff}.blk{border:0;border-bottom:1px solid #ccc;border-radius:0}}
+
+/* ===== Tema pastel ===== */
+body{background:linear-gradient(180deg,#fff7ee 0%,#f4f0ff 55%,#eefaf5 100%) fixed;position:relative}
+body::before{content:"♪  ♫  ♬  ♪  ♫";position:fixed;left:1rem;bottom:.5rem;font-size:2.6rem;letter-spacing:.8rem;color:#b9a8f0;opacity:.28;pointer-events:none;z-index:0}
+body::after{content:"♬  ♪  ♫";position:fixed;right:1rem;top:9rem;font-size:2.2rem;letter-spacing:.8rem;color:#ffb199;opacity:.3;pointer-events:none;z-index:0}
+main{position:relative;z-index:1}
+header{background:linear-gradient(120deg,#ffd6c4 0%,#e4d9ff 50%,#c9eee0 100%);color:#3b3560;text-align:center;padding:1.6rem 1rem 1.8rem;border-radius:0 0 30px 30px;box-shadow:0 8px 20px rgba(116,103,201,.18);position:relative;overflow:hidden}
+header h1{font-size:2.1rem;letter-spacing:.02em}
+header p{opacity:1;color:#4d4676}
+header::before{content:"🎵  🎶";position:absolute;left:1rem;top:.7rem;font-size:1.6rem;opacity:.75}
+header::after{content:"🎶  🎵";position:absolute;right:1rem;bottom:.6rem;font-size:1.6rem;opacity:.75}
+fieldset{border-width:2px;border-radius:18px;box-shadow:0 4px 12px rgba(116,103,201,.12)}
+fieldset:nth-of-type(1){background:#fff0e6;border-color:#ffc9ad}
+fieldset:nth-of-type(2){background:#e9f9f1;border-color:#a9e3c9}
+fieldset:nth-of-type(3){background:#f2edff;border-color:#cdbff7}
+fieldset:nth-of-type(4){background:#e8f4ff;border-color:#a9d3f5}
+legend{background:#fff;border-radius:999px;padding:.15rem .8rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+select,input[type=text],input:not([type]){border:2px solid #d9d0f5;border-radius:10px;padding:.35rem .5rem;background:#fff}
+button{border-radius:999px;box-shadow:0 3px 8px rgba(116,103,201,.3);transition:transform .15s}
+button:hover{transform:translateY(-2px)}
+button.sec{background:#fff;color:#5a4cb3;border:2px solid #cdbff7}
+#gen{background:linear-gradient(90deg,#ff9aa2,#ffc07a);color:#4a2230;font-weight:700;font-size:1.2rem;padding:.85rem 1.8rem;box-shadow:0 5px 14px rgba(255,140,120,.4)}
+#gen::before{content:"⏺ ";color:#e5484d}
+table{border-radius:12px;overflow:hidden}
+th{background:#e4d9ff}
+.blk{border-radius:16px;border:2px solid #d9d0f5;border-left:8px solid #b9a8f0;box-shadow:0 3px 10px rgba(116,103,201,.1)}
+.blk:nth-child(3n+2){border-left-color:#8fd8b8}
+.blk:nth-child(3n+3){border-left-color:#ffb199}
+.mus{color:#8a5a00;background:#fff3b0;display:inline-block;padding:0 .5rem;border-radius:8px}
+@media print{body::before,body::after{display:none}body{background:#fff}.blk{border:0;border-bottom:1px solid #ccc;border-radius:0;box-shadow:none}}
 </style></head><body>
-<header><h1>Dale al Rec</h1><p>Guiones de radio escolar: elige curso, temática y duración. Sin registro, sin IA, sin coste.</p></header>
+<header><h1>🎙️ Dale al Rec</h1><p>Guiones de radio escolar: elige curso, temática y duración. Sin registro, sin IA, sin coste.</p></header>
 <main>
-<fieldset><legend>1. Curso</legend>
+<fieldset><legend>🎒 1. Curso</legend>
 <label><input type="radio" name="et" value="infantil"> Infantil</label>
 <label><input type="radio" name="et" value="primaria" checked> Primaria</label>
 <label><input type="radio" name="et" value="eso"> ESO</label>
 <label><input type="radio" name="et" value="bachillerato"> Bachillerato</label>
 </fieldset>
-<fieldset><legend>2. Temática</legend>
+<fieldset><legend>📅 2. Temática</legend>
 <select id="tema"></select>
 <p class="small" id="libreInfo"></p>
 </fieldset>
-<fieldset><legend>3. Duración</legend>
+<fieldset><legend>⏱️ 3. Duración</legend>
 <select id="dur"><option value="5">5 minutos</option><option value="10" selected>10 minutos</option><option value="15">15 minutos</option><option value="20">20 minutos</option></select>
 </fieldset>
-<fieldset><legend>4. Locutores</legend>
+<fieldset><legend>🎤 4. Locutores</legend>
 <div class="row">
 <label>¿Cuántos locutores? (hasta 6)<select id="nloc"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label></div>
 <div class="row" id="locs"></div>
