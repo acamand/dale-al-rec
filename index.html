@@ -52,6 +52,9 @@ th{background:#e4d9ff}
 .blk:nth-child(3n+3){border-left-color:#ffb199}
 .mus{color:#8a5a00;background:#fff3b0;display:inline-block;padding:0 .5rem;border-radius:8px}
 @media print{body::before,body::after{display:none}body{background:#fff}.blk{border:0;border-bottom:1px solid #ccc;border-radius:0;box-shadow:none}}
+#rubfs{background:#fff8e1;border-color:#ffd98a}
+#rubbox table td,#rubbox table th{font-size:.9rem}
+@media print{body.solorub main>*:not(#rubbox){display:none!important}#rubbox .noprint{display:none}}
 </style><link rel="apple-touch-icon" href="Icono.jpg"><link rel="icon" href="Icono.jpg"></head><body>
 <header><h1>🎙️ Dale al Rec</h1><p>Guiones de radio escolar: elige curso, temática y duración. Sin registro, sin IA, sin coste.</p></header>
 <main>
@@ -90,6 +93,13 @@ th{background:#e4d9ff}
 <pre id="prompt" class="blk"></pre>
 <button id="cpp" class="sec">Copiar prompt</button>
 </div>
+<fieldset id="rubfs"><legend>📋 Rúbrica de evaluación</legend>
+<p class="small">Genera una rúbrica para evaluar el programa de radio según la etapa elegida en el paso 1 y el curso (LOMLOE, Andalucía).</p>
+<label>Curso<select id="rcur"></select></label>
+<button id="grub" class="sec">Generar rúbrica</button>
+</fieldset>
+<div id="rubbox" class="hidden"><div id="rubout"></div>
+<div class="noprint"><button id="cprub" class="sec">Copiar rúbrica</button><button id="prrub" class="sec">Imprimir rúbrica</button></div></div>
 <p class="small">Los textos son orientativos. Revisa los datos antes de emitir. El centro es responsable del contenido que añada.</p>
 </main>
 <script>
@@ -160,4 +170,77 @@ function gen(){
 }
 async function cp(txt,btn){try{await navigator.clipboard.writeText(txt)}catch(e){const a=document.createElement("textarea");a.value=txt;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove()}const o=btn.textContent;btn.textContent="¡Copiado!";setTimeout(()=>btn.textContent=o,1500)}
 $("nloc").onchange=renderLocs;renderLocs();$("gen").onclick=gen;$("cp").onclick=()=>cp(ultimo,$("cp"));$("cpp").onclick=()=>cp($("prompt").textContent,$("cpp"));$("pr").onclick=()=>window.print();
+/* ===== Rúbricas de evaluación (LOMLOE Andalucía) ===== */
+const CURSOS={infantil:["3 años","4 años","5 años"],primaria:["1º","2º","3º","4º","5º","6º"],eso:["1º","2º","3º","4º"],bachillerato:["1º","2º"]};
+const CR={
+primaria:{
+ "3.1":["3.1.a. Producir textos orales y multimodales sencillos, con planificación acompañada a partir de modelos dados.",
+  "3.1.b. Producir textos orales y multimodales coherentes, con planificación acompañada y utilizando recursos no verbales elementales.",
+  "3.1.a. Producir textos orales y multimodales coherentes, con planificación acompañada y a partir de modelos dados, ajustando el discurso a la situación comunicativa y utilizando recursos no verbales básicos.",
+  "3.1.b. Producir textos orales y multimodales coherentes, con planificación acompañada, ajustando el discurso a la situación comunicativa y utilizando recursos no verbales básicos.",
+  "3.1.a. Producir textos orales y multimodales de manera progresivamente autónoma, coherente y fluida, en contextos formales sencillos y utilizando correctamente recursos verbales y no verbales básicos.",
+  "3.1.b. Producir textos orales y multimodales de manera autónoma, coherente y fluida, en contextos formales sencillos y utilizando correctamente recursos verbales y no verbales básicos."],
+ "3.2":["3.2.a. Participar en interacciones orales, a partir de modelos dados utilizando algunas normas básicas de la cortesía lingüística.",
+  "3.2.b. Participar en interacciones orales espontáneas, incorporando estrategias elementales de escucha activa y de cortesía lingüística.",
+  "3.2.a. Participar en interacciones orales espontáneas, respetando las normas básicas de la cortesía lingüística e iniciándose en estrategias de escucha activa.",
+  "3.2.b. Participar en interacciones orales espontáneas o regladas, incorporando estrategias básicas de escucha activa y cortesía lingüística.",
+  "3.2.a. Participar en interacciones orales espontáneas o regladas, respetando las normas de la cortesía lingüística, iniciando de manera acompañada el desarrollo de estrategias sencillas de escucha activa y de cooperación conversacional.",
+  "3.2.b. Participar en interacciones orales espontáneas o regladas, incorporando estrategias sencillas de escucha activa, de cortesía lingüística y de cooperación conversacional."],
+ "5.1":["5.1.a. Producir textos escritos y multimodales sencillos y coherentes, desde las diferentes etapas del proceso evolutivo de la escritura, ajustándose a modelos dados.",
+  "5.1.b. Producir textos escritos y multimodales sencillos y coherentes en distintos soportes, ajustándose a modelos dados y movilizando, de manera acompañada, estrategias elementales, individuales o grupales, de planificación, textualización y revisión.",
+  "5.1.a. Producir textos escritos y multimodales sencillos y coherentes, en distintos soportes, para diferentes modelos discursivos, iniciándose en el uso de las normas gramaticales y ortográficas más sencillas y progresando, de manera acompañada, en estrategias de planificación, redacción, revisión y edición.",
+  "5.1.b. Producir textos escritos y multimodales sencillos, con coherencia y adecuación, en distintos soportes, seleccionando el modelo discursivo que mejor responda a cada situación comunicativa (…).",
+  "5.1.a. Producir textos escritos y multimodales coherentes, en distintos soportes, seleccionando el modelo discursivo que mejor responda a cada situación comunicativa, progresando en el uso de las normas gramaticales y ortográficas básicas (…).",
+  "5.1.b. Producir textos escritos y multimodales de relativa complejidad, con coherencia y adecuación, en distintos soportes, progresando en el uso de las normas gramaticales y ortográficas básicas al servicio de la cohesión textual (…)."]},
+eso:{
+ "3.1":["3.1. Realizar narraciones orales sencillas, organizando el contenido y ajustándose progresivamente a las convenciones propias del género discursivo, con fluidez, coherencia, cohesión y el registro adecuado, utilizando de manera eficaz recursos verbales y no verbales.",
+  "3.1. Realizar narraciones y exposiciones orales sencillas con diferente grado de planificación sobre temas de interés personal, social y educativo, ajustándose a las convenciones propias de los diversos géneros discursivos, con fluidez, coherencia, cohesión y el registro adecuado, en diferentes soportes y utilizando de manera eficaz recursos verbales y no verbales.",
+  "3.1. Realizar exposiciones y argumentaciones orales de cierta extensión y complejidad, organizando el contenido sobre temas de interés personal, social y educativo, ajustándose a las convenciones de los diversos géneros discursivos, para estructurar el discurso y adecuar el registro y el comportamiento no verbal, con fluidez, coherencia y cohesión en diferentes soportes.",
+  "3.1. Realizar exposiciones y argumentaciones orales de cierta extensión y complejidad con diferente grado de planificación en contextos diversificados y significativos sobre temas de interés personal, social, educativo y profesional, ajustándose a las convenciones de los diversos géneros discursivos (…)."],
+ "3.2":["3.2. Participar de manera activa y adecuada en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales básicas de carácter dialogado, con actitudes de escucha activa y estrategias de cooperación conversacional y cortesía lingüística.",
+  "3.2. Participar de manera activa y adecuada en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales de carácter dialogado, con actitudes de escucha activa y estrategias de cooperación conversacional y cortesía lingüística.",
+  "3.2. Participar de manera activa y adecuada en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales de carácter dialogado, con actitudes de escucha activa y estrategias de cooperación conversacional y cortesía lingüística.",
+  "3.2. Participar de manera activa y adecuada en interacciones orales informales, en el trabajo en equipo y en situaciones orales formales relacionadas con diferentes contextos de carácter dialogado, con actitudes de escucha activa, de respeto hacia el interlocutor y estrategias de cooperación conversacional (…)."]}};
+const INF=[
+ ["Expresión oral en el programa","3.1. Hacer un uso funcional del lenguaje oral, aumentando su repertorio lingüístico y construyendo progresivamente un discurso más eficaz, organizado y coherente en contextos formales e informales."],
+ ["Relato y expresión de ideas","3.3. Evocar y expresar espontáneamente ideas a través del relato oral en un contexto de respeto hacia las diferencias individuales."],
+ ["Turnos y trabajo con el grupo","3.2. Utilizar el lenguaje oral como instrumento regulador de la acción en las interacciones con los demás con seguridad y confianza."],
+ ["Expresividad (voz, gesto, música)","1.2. Utilizar las posibilidades expresivas de los diferentes lenguajes, ajustando su repertorio comunicativo a las propuestas, a los interlocutores y al contexto."],
+ ["Uso de medios digitales","1.4. Interactuar de manera virtual, familiarizándose con el uso de diferentes medios y herramientas digitales."]];
+const NIV=["Iniciado (1)","En desarrollo (2)","Adquirido (3)","Avanzado (4)"];
+function filas(e,i){
+ const A=e==="primaria"?["con mucha ayuda","con ayuda y modelos","con apoyo puntual","de forma autónoma"]:["con mucha ayuda","con algo de ayuda","de forma adecuada","con soltura y criterio propio"];
+ const c=CR[e]||{};
+ return [
+  ["Expresión oral y locución",c["3.1"]?c["3.1"][i]:null,
+   ["Habla con poca claridad y volumen; le cuesta seguir el guion.","Se le entiende, pero con titubeos; usa poco la entonación.","Se expresa con claridad, buen ritmo y entonación adecuada al público.","Locuta con fluidez, naturalidad y expresividad, y adapta voz y registro a cada sección."]],
+  ["Interacción, escucha y trabajo en equipo",c["3.2"]?c["3.2"][i]:null,
+   ["Interrumpe o no respeta los turnos; participa poco en el equipo.","Respeta los turnos "+A[1]+"; colabora de forma irregular.","Respeta turnos, escucha y colabora en su rol dentro del equipo.","Coordina, escucha activamente y ayuda al resto a mejorar su intervención."]],
+  ["Guion y escaleta",c["5.1"]?c["5.1"][i]:(e==="eso"?"Competencia específica 5 de Lengua Castellana y Literatura (producción de textos escritos y multimodales). CCL1, CCL3, CD2.":null),
+   ["El guion está incompleto o desordenado.","El guion sigue la estructura "+A[1]+", con algunos errores.","El guion es coherente, sigue la escaleta y respeta los tiempos.","El guion es original, bien estructurado, revisado y ajustado al tiempo y al público."]],
+  ["Uso de la tecnología y los medios","Competencia digital (CD2, CD3, CD4): creación de contenidos, comunicación y uso seguro y responsable.",
+   ["Usa el micro y los recursos "+A[0]+".","Usa micro, música o Audacity "+A[1]+".","Maneja micro, música y edición básica "+A[2]+" y respeta la privacidad y los derechos de imagen y voz.","Maneja la técnica "+A[3]+", resuelve problemas y cuida la privacidad y la autoría de los recursos."]],
+  ["Creatividad y adecuación al público","Competencia en conciencia y expresión culturales (CCEC3, CCEC4) y emprendedora (CE1, CE3).",
+   ["Aporta pocas ideas propias.","Aporta alguna idea, aunque poco adaptada al público.","Aporta ideas propias y adecuadas al público y al tema.","Propone ideas originales que enganchan a la audiencia y enriquecen el programa."]]];
+}
+function renderCursos(){const e=et();$("rcur").innerHTML=CURSOS[e].map((c,i)=>'<option value="'+i+'">'+c+"</option>").join("")}
+let ultRub="";
+function genRub(){
+ const e=et(),i=+$("rcur").value,cur=CURSOS[e][i];
+ let h,t;
+ if(e==="infantil"){
+  h='<h2>Registro de observación · Infantil · '+cur+'</h2><p class="small">En Infantil la evaluación es global, continua y formativa: esta lista sirve como registro de observación, no como calificación. Criterios del área «Comunicación y Representación de la Realidad» (segundo ciclo), Orden de 30 de mayo de 2023.</p><table><thead><tr><th>Aspecto</th><th>Criterio de evaluación</th><th>Conseguido</th><th>En proceso</th><th>Necesita apoyo</th></tr></thead><tbody>'+INF.map(f=>"<tr><td><b>"+f[0]+"</b></td><td class=\"small\">"+esc(f[1])+"</td><td></td><td></td><td></td></tr>").join("")+"</tbody></table>";
+  t="REGISTRO DE OBSERVACIÓN · INFANTIL · "+cur+"\n\n"+INF.map(f=>"- "+f[0]+": "+f[1]+"\n  [ ] Conseguido  [ ] En proceso  [ ] Necesita apoyo").join("\n");
+ }else{
+  const F=filas(e,i),et2=e==="eso"?"ESO":e[0].toUpperCase()+e.slice(1);
+  const nota=e==="bachillerato"?"Aún no se han incorporado los criterios oficiales de Bachillerato: esta rúbrica usa descriptores generales basados en las competencias clave. Revísala con la normativa de Bachillerato.":"Criterios de evaluación de Lengua Castellana y Literatura (competencias específicas 3"+(e==="primaria"?" y 5":"")+"), Orden de 30 de mayo de 2023 (Andalucía). Las filas de competencia digital y creatividad son transversales.";
+  h='<h2>Rúbrica de evaluación · '+et2+' · '+cur+'</h2><p class="small">'+nota+'</p><table><thead><tr><th>Criterio</th>'+NIV.map(n=>"<th>"+n+"</th>").join("")+"</tr></thead><tbody>"+F.map(f=>"<tr><td><b>"+f[0]+"</b>"+(f[1]?'<br><span class="small">'+esc(f[1])+"</span>":"")+"</td>"+f[2].map(d=>"<td>"+esc(d)+"</td>").join("")+"</tr>").join("")+"</tbody></table><p class=\"small\">Puntuación: suma de niveles (mínimo 5, máximo 20). Adapta los descriptores a tu grupo.</p>";
+  t="RÚBRICA DE EVALUACIÓN · "+et2+" · "+cur+"\n"+nota+"\n\n"+F.map(f=>"== "+f[0]+" ==\n"+(f[1]?f[1]+"\n":"")+f[2].map((d,k)=>NIV[k]+": "+d).join("\n")).join("\n\n");
+ }
+ $("rubout").innerHTML=h;ultRub=t;$("rubbox").classList.remove("hidden");$("rubbox").scrollIntoView({behavior:"smooth"});
+}
+document.querySelectorAll('input[name=et]').forEach(r=>r.addEventListener("change",renderCursos));renderCursos();
+$("grub").onclick=genRub;$("cprub").onclick=()=>cp(ultRub,$("cprub"));
+$("prrub").onclick=()=>{document.body.classList.add("solorub");window.print();setTimeout(()=>document.body.classList.remove("solorub"),500)};
+
 </script></body></html>
